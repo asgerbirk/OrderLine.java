@@ -4,9 +4,14 @@ Demonstrates creation of a simple JPA Order, OrderLine and Product relationship,
 ## Step 1: Create a Spring Boot Project
 Create a simple Spring Boot project, we'll add the required dependencies, in the next step.
 
-Select ***File/New Project*** in the menu.
+- Select ***File/New Project*** in the IntelliJ menu.
+- Select Spring Boot
 
 ![image](https://user-images.githubusercontent.com/8819076/187045232-09955897-4e8d-4411-b54c-fd35932bcb1c.png)
+
+- Select Spring Web
+- Select Spring Data JPA
+- Select Lombok
 
 ![image](https://user-images.githubusercontent.com/8819076/187045381-1b1bab67-7749-4c01-8d28-e563995ec136.png)
 
@@ -69,10 +74,14 @@ spring.jpa.hibernate.use-new-id-generator-mappings=true
 - [OrderController](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/order/controller/OrderController.java)
 
 ### Add OrderLine classes
-- [OrderLine.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/order/model/Order.java)
-- [OrderLineRepository](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/model/OrderLineRepository.java)
+- [OrderLine.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/model/OrderLine.java)
+- [OrderLineRepository](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/model/OrderlineRepository.java)
 - [OrderLineService](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/service/OrderLineService.java)
 - [OrderLineController](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/controller/OrderLineController.java)
 
 ### Add Product classes
+- [Product.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/product/model/Product.java)
+- [ProductRepository](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/product/model/ProductRepository.java)
+- [ProductService](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/product/service/ProductService.java)
+- [ProductController](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/product/controller/ProductController.java)
 
