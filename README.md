@@ -4,6 +4,14 @@ Demonstrates creation of a simple JPA Order, OrderLine and Product relationship,
 ## Step 1: Create a Spring Boot Project
 Create a simple Spring Boot project, we'll add the required dependencies, in the next step.
 
+Select ***File/New Project*** in the menu.
+
+![image](https://user-images.githubusercontent.com/8819076/187045232-09955897-4e8d-4411-b54c-fd35932bcb1c.png)
+
+![image](https://user-images.githubusercontent.com/8819076/187045381-1b1bab67-7749-4c01-8d28-e563995ec136.png)
+
+
+
 ## Step 2: Configuring the pom.xml file.
 Make sure you have all these dependencies;
 ```xml
