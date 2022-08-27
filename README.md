@@ -7,13 +7,14 @@ Create a simple Spring Boot project, we'll add the required dependencies, in the
 - Select ***File/New Project*** in the IntelliJ menu.
 - Select Spring Boot
 
-![image](https://user-images.githubusercontent.com/8819076/187045232-09955897-4e8d-4411-b54c-fd35932bcb1c.png)
+![image](https://user-images.githubusercontent.com/8819076/187045753-d8177225-8f3c-4e4e-8fd6-af4d7068f9ba.png)
+
 
 - Select Spring Web
 - Select Spring Data JPA
 - Select Lombok
 
-![image](https://user-images.githubusercontent.com/8819076/187045381-1b1bab67-7749-4c01-8d28-e563995ec136.png)
+![image](https://user-images.githubusercontent.com/8819076/187045853-a906fd4e-7f89-4dad-9d3d-412ddae86083.png)
 
 
 
