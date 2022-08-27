@@ -53,7 +53,7 @@ Make sure you have all these dependencies;
             <scope>test</scope>
         </dependency>
 ```
-## Configurering H2 Memory Database
+## Step 4: Configurering H2 Memory Database
 Set the ***resources/application.properties*** file to
 
 ```properties
@@ -71,6 +71,14 @@ spring.datasource.hikari.password=
 spring.jpa.show-sql=true
 spring.jpa.hibernate.use-new-id-generator-mappings=true
 ```
+## Step 5: Copy/Paste the classes
+Now, for simplicity, for each class,
+- Go to the link.
+- Click Raw (to see the raw code text).
+- Copy the code.
+- Place youself on the java folder, in the project, and paste the code.
+- Go to the first line, in the new java file.
+- Click ALT-ENTER, and select Move, to move the file into the correct sub package.
 
 ### Add Order classes
 - [Order.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/order/model/Order.java)
