@@ -6,22 +6,22 @@ Create a simple Spring Boot project, we'll add the required dependencies, in the
 
 - Select ***File/New Project*** in the IntelliJ menu.
 - Select Spring Initializer
-
-
+- Click Next
 > For simplicity, please use the values in the dialog (it's ok if you want to save it ato another location).
 
 ![image](https://user-images.githubusercontent.com/8819076/187045753-d8177225-8f3c-4e4e-8fd6-af4d7068f9ba.png)
 
-
-
+## Step 2: Select dependenciew
 
 ![image](https://user-images.githubusercontent.com/8819076/187045853-a906fd4e-7f89-4dad-9d3d-412ddae86083.png)
 
-- Select Spring Web
-- Select Spring Data JPA
-- Select Lombok
+- Select Spring Web (category: Web)
+- Select Spring Data JPA (category: SQL)
+- H2 Database (category: SQL)
+- Select Lombok (category: Developer Tools)
+- Select Validation (category: I/O)
 
-## Step 2: Configuring the pom.xml file.
+## Step 3: Configuring the pom.xml file.
 Make sure you have all these dependencies;
 ```xml
        <dependency>
