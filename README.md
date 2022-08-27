@@ -78,7 +78,7 @@ Now, for simplicity, for each of the Java class links below:
 - Copy the code.
 - Place youself on the java folder, in the project, and paste the code.
 - Go to the first line, in the new Java file.
-- Click [ALT-ENTER], and select Move, to move the file into the correct sub package.
+- Click ALT-ENTER, and select Move, to move the file into the correct sub package.
 
 ### Add Order classes
 - [Order.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/order/model/Order.java)
@@ -150,3 +150,10 @@ In you're DemoApplication class, paste this method, which will import some simpl
 
     }
 ```
+
+
+## Step 8: Test that the app can run (with data)
+- Run the app.
+- Goto http://8080/api/v1/orders
+- Goto http://8080/api/v1/orderlines
+- Goto http://8080/api/v1/products
