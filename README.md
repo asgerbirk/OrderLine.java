@@ -11,7 +11,7 @@ Create a simple Spring Boot project, we'll add the required dependencies, in the
 
 ![image](https://user-images.githubusercontent.com/8819076/187045753-d8177225-8f3c-4e4e-8fd6-af4d7068f9ba.png)
 
-## Step 2: Select dependenciew
+## Step 2: Select dependencies
 
 ![image](https://user-images.githubusercontent.com/8819076/187045853-a906fd4e-7f89-4dad-9d3d-412ddae86083.png)
 
