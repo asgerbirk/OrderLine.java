@@ -5,7 +5,7 @@ Demonstrates creation of a simple JPA Order, OrderLine and Product relationship,
 Create a simple Spring Boot project, we'll add the required dependencies, in the next step.
 
 - Select ***File/New Project*** in the IntelliJ menu.
-- Select Spring Boot
+- Select Spring Initializer
 
 ![image](https://user-images.githubusercontent.com/8819076/187045753-d8177225-8f3c-4e4e-8fd6-af4d7068f9ba.png)
 
