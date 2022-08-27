@@ -23,7 +23,7 @@ Select the following modules:
 - Validation (category: I/O)
 
 ## Step 3: Configuring the pom.xml file.
-Make sure you have all these dependencies;
+Make sure you have all these dependencies:
 ```xml
        <dependency>
             <groupId>org.springframework.boot</groupId>
