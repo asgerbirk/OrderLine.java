@@ -80,7 +80,7 @@ spring.jpa.hibernate.use-new-id-generator-mappings=true
 
 ### Add OrderLine classes
 - [OrderLine.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/model/OrderLine.java)
-- [OrderLineRepository](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/model/OrderlineRepository.java)
+- [OrderLineRepository](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/model/OrderLineRepository.java)
 - [OrderLineService](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/service/OrderLineService.java)
 - [OrderLineController](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/orderline/controller/OrderLineController.java)
 
