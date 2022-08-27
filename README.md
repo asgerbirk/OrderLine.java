@@ -72,13 +72,13 @@ spring.jpa.show-sql=true
 spring.jpa.hibernate.use-new-id-generator-mappings=true
 ```
 ## Step 5: Copy/Paste the classes
-Now, for simplicity, for each class,
-- Go to the link.
+Now, for simplicity, for each of the Java class links below:
+- Follow the link.
 - Click Raw (to see the raw code text).
 - Copy the code.
 - Place youself on the java folder, in the project, and paste the code.
-- Go to the first line, in the new java file.
-- Click ALT-ENTER, and select Move, to move the file into the correct sub package.
+- Go to the first line, in the new Java file.
+- Click [ALT-ENTER], and select Move, to move the file into the correct sub package.
 
 ### Add Order classes
 - [Order.java](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/order/model/Order.java)
@@ -98,3 +98,55 @@ Now, for simplicity, for each class,
 - [ProductService](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/product/service/ProductService.java)
 - [ProductController](https://github.com/RonniKahalani/SimpleJPAwithREST/blob/master/src/main/java/com/example/demo/product/controller/ProductController.java)
 
+When you're done with every of the Java files above, there shold be no errors.
+
+## Step 6: Test that the app can run (with no data)
+- Run the app.
+- Goto http://8080/api/v1/orders
+- Goto http://8080/api/v1/orderlines
+- Goto http://8080/api/v1/products
+
+If you get [] on all end ponts, you've successfully create you're first Spring Boot JPS/REST app. Congratulations!
+
+## Step 7: Import data via Java (CommendLineRunner)
+In you're DemoApplication class, paste this method, which will import some simple data.
+- Solve all the missing imports (with ALT-ENTER)
+
+```java
+   @Bean
+    public CommandLineRunner importData(OrderRepository orderRepository,
+                                        OrderLineRepository orderLineRepository,
+                                        ProductRepository productRepository) {
+        return (args) -> {
+
+            /**
+             *  Orders
+             */
+            final List<Order> orders = new ArrayList<>();
+            orders.add(new Order(new Date()));
+            orders.add(new Order(new Date()));
+            orders.add(new Order(new Date()));
+            orderRepository.saveAll(orders);
+
+            /**
+             *  Products
+             */
+            final List<Product> products = new ArrayList<>();
+            products.add(new Product("Product 1"));
+            products.add(new Product("Product 2"));
+            products.add(new Product("Product 3"));
+            productRepository.saveAll(products);
+
+            /**
+             *  Orderlines
+             */
+            final List<OrderLine> orderLines = new ArrayList<>();
+            orderLines.add(new OrderLine(orders.get(0), products.get(0)));
+            orderLines.add(new OrderLine(orders.get(1), products.get(1)));
+            orderLines.add(new OrderLine(orders.get(2), products.get(2)));
+            orderLineRepository.saveAll(orderLines);
+
+        };
+
+    }
+```
