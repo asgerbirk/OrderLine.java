@@ -5,9 +5,9 @@ Demonstrates creation of a simple JPA Order, OrderLine and Product relationship,
 Create a simple Spring Boot project, we'll add the required dependencies, in the next step.
 
 - Select ***File/New Project*** in the IntelliJ menu.
-- Select Spring Initializer
+- Select Spring Initializer.
 > For simplicity, please use the values in the dialog below (it's ok if you want to save it to another location).
-- Click Next
+- Click Next.
 
 ![image](https://user-images.githubusercontent.com/8819076/187045753-d8177225-8f3c-4e4e-8fd6-af4d7068f9ba.png)
 
@@ -15,11 +15,12 @@ Create a simple Spring Boot project, we'll add the required dependencies, in the
 
 ![image](https://user-images.githubusercontent.com/8819076/187045853-a906fd4e-7f89-4dad-9d3d-412ddae86083.png)
 
-- Select Spring Web (category: Web)
-- Select Spring Data JPA (category: SQL)
+Select the following modules: 
+- Lombok (category: Developer Tools)
+- Spring Web (category: Web)
+- Spring Data JPA (category: SQL)
 - H2 Database (category: SQL)
-- Select Lombok (category: Developer Tools)
-- Select Validation (category: I/O)
+- Validation (category: I/O)
 
 ## Step 3: Configuring the pom.xml file.
 Make sure you have all these dependencies;
