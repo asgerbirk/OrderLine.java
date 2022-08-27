@@ -1,7 +1,6 @@
-package com.example.demo.product;
+package com.example.demo.product.model;
 
-import com.example.demo.order.Order;
-import com.example.demo.orderline.OrderLine;
+import com.example.demo.order.model.Order;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

@@ -1,7 +1,7 @@
-package com.example.demo.orderline;
+package com.example.demo.orderline.model;
 
-import com.example.demo.order.Order;
-import com.example.demo.product.Product;
+import com.example.demo.order.model.Order;
+import com.example.demo.product.model.Product;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;

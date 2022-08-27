@@ -1,4 +1,4 @@
-package com.example.demo.order;
+package com.example.demo.order.model;
 
 import org.springframework.data.repository.CrudRepository;
 

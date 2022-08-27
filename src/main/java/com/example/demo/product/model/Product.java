@@ -1,6 +1,6 @@
-package com.example.demo.product;
+package com.example.demo.product.model;
 
-import com.example.demo.orderline.OrderLine;
+import com.example.demo.orderline.model.OrderLine;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

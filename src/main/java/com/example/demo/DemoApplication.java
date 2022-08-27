@@ -1,11 +1,11 @@
 package com.example.demo;
 
-import com.example.demo.order.Order;
-import com.example.demo.order.OrderRepository;
-import com.example.demo.orderline.OrderLine;
-import com.example.demo.orderline.OrderLineRepository;
-import com.example.demo.product.Product;
-import com.example.demo.product.ProductRepository;
+import com.example.demo.order.model.Order;
+import com.example.demo.order.model.OrderRepository;
+import com.example.demo.orderline.model.OrderLine;
+import com.example.demo.orderline.model.OrderLineRepository;
+import com.example.demo.product.model.Product;
+import com.example.demo.product.model.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -13,9 +13,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class DemoApplication {

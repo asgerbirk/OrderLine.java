@@ -1,5 +1,8 @@
-package com.example.demo.order;
+package com.example.demo.order.controller;
 
+import com.example.demo.order.model.Order;
+import com.example.demo.order.model.OrderRepository;
+import com.example.demo.order.service.OrderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

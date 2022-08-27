@@ -1,6 +1,6 @@
-package com.example.demo.product;
+package com.example.demo.product.service;
 
-import com.example.demo.orderline.OrderLine;
+import com.example.demo.product.model.Product;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 

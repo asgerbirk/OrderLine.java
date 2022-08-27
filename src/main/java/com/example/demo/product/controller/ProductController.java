@@ -1,5 +1,8 @@
-package com.example.demo.product;
+package com.example.demo.product.controller;
 
+import com.example.demo.product.model.Product;
+import com.example.demo.product.model.ProductRepository;
+import com.example.demo.product.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

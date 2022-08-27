@@ -1,8 +1,8 @@
-package com.example.demo.orderline;
+package com.example.demo.orderline.controller;
 
-import com.example.demo.order.Order;
-import com.example.demo.order.OrderRepository;
-import com.example.demo.order.OrderService;
+import com.example.demo.orderline.model.OrderLine;
+import com.example.demo.orderline.model.OrderLineRepository;
+import com.example.demo.orderline.service.OrderLineService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
