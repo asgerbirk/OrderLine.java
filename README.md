@@ -1,6 +1,7 @@
 # SimpleJPAwithREST
 Demonstrates creation of a simple JPA Order, OrderLine and Product relationship, exposed as REST endpoints.
 
+
 ## Step 1: Create a Spring Boot Project
 Create a simple Spring Boot project, we'll add the required dependencies, in the next step.
 
@@ -10,6 +11,7 @@ Create a simple Spring Boot project, we'll add the required dependencies, in the
 - Click Next.
 
 ![image](https://user-images.githubusercontent.com/8819076/187045753-d8177225-8f3c-4e4e-8fd6-af4d7068f9ba.png)
+
 
 ## Step 2: Select dependencies
 
