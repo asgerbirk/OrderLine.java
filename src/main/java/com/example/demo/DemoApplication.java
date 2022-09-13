@@ -60,6 +60,7 @@ public class DemoApplication {
             orderLines.add(new OrderLine(orders.get(0), products.get(0)));
             orderLines.add(new OrderLine(orders.get(0), products.get(0)));
             orderLines.add(new OrderLine(orders.get(0), products.get(0)));
+            orderLines.add(new OrderLine(orders.get(0), products.get(0)));
             orderLines.add(new OrderLine(orders.get(1), products.get(1)));
             orderLines.add(new OrderLine(orders.get(2), products.get(2)));
             orderLineRepository.saveAll(orderLines);
