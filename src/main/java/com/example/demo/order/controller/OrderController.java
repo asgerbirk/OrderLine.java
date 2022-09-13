@@ -15,12 +15,12 @@ import java.util.Optional;
 @RequestMapping("api/v1/orders")
 public class OrderController {
 
-    private final OrderRepository repository;
-    private final OrderService service;
 
-    public OrderController(OrderRepository repository, OrderService service) {
-        this.repository = repository;
-        this.service = service;
+    private final OrderService orderService;
+
+    public OrderController(OrderService orderService) {
+        this.orderService = orderService;
+
     }
 
     /**
@@ -31,8 +31,7 @@ public class OrderController {
      */
     @GetMapping
     ResponseEntity<List<Order>> findAll() {
-        List<Order> all = (List<Order>) repository.findAll();
-        return ResponseEntity.ok().body(all);
+        return ResponseEntity.ok().body(orderService.findAll());
     }
 
     /**
@@ -44,7 +43,7 @@ public class OrderController {
      */
     @GetMapping("/{id}")
     public ResponseEntity<Order> find(@PathVariable("id") Long id) {
-        Optional<Order> item = Optional.of(service.find(id)
+        Optional<Order> item = Optional.of(orderService.find(id)
                 .orElseThrow(() -> new RuntimeException("Order %d not found.".formatted(id))));
         return ResponseEntity.ok().body(item.get());
     }
@@ -58,7 +57,7 @@ public class OrderController {
      */
     @PostMapping
     public ResponseEntity<Order> create(@Valid @RequestBody Order order) {
-        Order item = service.create(order);
+        Order item = orderService.create(order);
         return ResponseEntity.ok().body(item);
     }
 
@@ -72,7 +71,7 @@ public class OrderController {
      */
     @PutMapping("/{id}")
     public ResponseEntity<Order> put(@PathVariable("id") Long id, @Valid @RequestBody Order order) {
-        return ResponseEntity.ok().body(service.update(id, order));
+        return ResponseEntity.ok().body(orderService.update(id, order));
     }
 
     /**
@@ -85,7 +84,7 @@ public class OrderController {
      */
     @PatchMapping("/{id}")
     public ResponseEntity<Order> patch(@PathVariable("id") Long id, @Valid @RequestBody Order order) {
-        return ResponseEntity.ok().body(service.update(id, order));
+        return ResponseEntity.ok().body(orderService.update(id, order));
     }
 
     /**
@@ -97,9 +96,9 @@ public class OrderController {
      */
     @DeleteMapping("/{id}")
     public ResponseEntity<Order> delete(@PathVariable("id") Long id) {
-        service.find(id).orElseThrow(() -> new RuntimeException("Spaceship %d not found.".formatted(id)));
+        orderService.find(id).orElseThrow(() -> new RuntimeException("Spaceship %d not found.".formatted(id)));
 
-        Order delete = service.delete(id);
+        Order delete = orderService.delete(id);
         return ResponseEntity.ok().body(delete);
     }
 

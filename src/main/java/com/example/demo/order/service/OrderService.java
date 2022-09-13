@@ -1,33 +1,37 @@
 package com.example.demo.order.service;
 
 import com.example.demo.order.model.Order;
-import org.springframework.data.repository.CrudRepository;
+import com.example.demo.order.model.OrderRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class OrderService {
-    private final CrudRepository<Order, Long> repository;
+    private final OrderRepository orderRepository;
 
-    public OrderService(CrudRepository<Order, Long> repository) {
-        this.repository = repository;
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
     }
 
+    public List<Order> findAll(){
+        return orderRepository.findAll();
+    }
     public Optional<Order> find(Long id) {
-        return repository.findById(id);
+        return orderRepository.findById(id);
     }
 
     public Order create(Order order) {
-        return repository.save(order);
+        return orderRepository.save(order);
     }
 
     public Order update(Long id, Order order) {
-        return repository.save( order);
+        return orderRepository.save( order);
     }
 
     public Order delete(Long id) {
-        repository.deleteById(id);
+        orderRepository.deleteById(id);
         return null;
     }
 }

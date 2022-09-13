@@ -3,6 +3,7 @@ package com.example.demo.product.controller;
 import com.example.demo.product.model.Product;
 import com.example.demo.product.model.ProductRepository;
 import com.example.demo.product.service.ProductService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +16,10 @@ import java.util.Optional;
 @RequestMapping("api/v1/products")
 public class ProductController {
 
-    private final ProductRepository repository;
-    private final ProductService service;
+    private final ProductService productService;
 
-    public ProductController(ProductRepository repository, ProductService service) {
-        this.repository = repository;
-        this.service = service;
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     /**
@@ -31,34 +30,21 @@ public class ProductController {
      */
     @GetMapping
     ResponseEntity<List<Product>> findAll() {
-        List<Product> all = (List<Product>) repository.findAll();
-        return ResponseEntity.ok().body(all);
+        return ResponseEntity.ok().body(productService.findAll());
     }
 
-    /**
-     * Handles getting/finding a product.
-     *
-     * @param id
-     * @see <a href="http://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET">HTTP GET</a>
-     */
+
     @GetMapping("/{id}")
     public ResponseEntity<Product> find(@PathVariable("id") Long id) {
-        Optional<Product> item = Optional.of(service.find(id)
+        Optional<Product> item = Optional.of(productService.find(id)
                 .orElseThrow(() -> new RuntimeException("Product %d not found.".formatted(id))));
         return ResponseEntity.ok().body(item.get());
     }
 
-    /**
-     * Handles posting/creating a product.
-     *
-     * @param product
-     * @return newly created product
-     * @see <a href="http://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">HTTP POST</a>
-     */
+
     @PostMapping
     public ResponseEntity<Product> create(@Valid @RequestBody Product product) {
-        Product item = service.create(product);
-        return ResponseEntity.ok().body(item);
+        return new ResponseEntity<>(productService.create(product), HttpStatus.OK);
     }
 
     /**
@@ -71,7 +57,7 @@ public class ProductController {
      */
     @PutMapping("/{id}")
     public ResponseEntity<Product> put(@PathVariable("id") Long id, @Valid @RequestBody Product product) {
-        return ResponseEntity.ok().body(service.update(id, product));
+        return ResponseEntity.ok().body(productService.update(id, product));
     }
 
     /**
@@ -84,7 +70,7 @@ public class ProductController {
      */
     @PatchMapping("/{id}")
     public ResponseEntity<Product> patch(@PathVariable("id") Long id, @Valid @RequestBody Product product) {
-        return ResponseEntity.ok().body(service.update(id, product));
+        return ResponseEntity.ok().body(productService.update(id, product));
     }
 
     /**
@@ -96,9 +82,7 @@ public class ProductController {
      */
     @DeleteMapping("/{id}")
     public ResponseEntity<Product> delete(@PathVariable("id") Long id) {
-        service.find(id).orElseThrow(() -> new RuntimeException("Product %d not found.".formatted(id)));
-
-        Product delete = service.delete(id);
-        return ResponseEntity.ok().body(delete);
+        productService.find(id).orElseThrow(() -> new RuntimeException("Product %d not found.".formatted(id)));
+        return ResponseEntity.ok().body(productService.delete(id));
     }
 }
